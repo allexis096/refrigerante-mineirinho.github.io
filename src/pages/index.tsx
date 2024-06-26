@@ -159,7 +159,7 @@ export default function Home() {
           marginTop: 90,
         }}
       >
-        <h3>VAI ENTRAR OUTRA COISA AQUI</h3>
+        <h3>Uma história de sabor e tradição</h3>
 
         <Image
           src="/image-video.png"
