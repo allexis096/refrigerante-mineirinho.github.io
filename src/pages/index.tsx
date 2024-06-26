@@ -1,11 +1,46 @@
 import Head from 'next/head'
-import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import { FaLinkedinIn, FaInstagram, FaFacebook } from 'react-icons/fa6'
-
-const inter = Inter({ subsets: ['latin'] })
+import Slider from 'react-slick'
+import Image from 'next/image'
 
 export default function Home() {
+  function SimpleSlider() {
+    var settings = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToScroll: 1,
+      centerMode: true,
+      centerPadding: '70px',
+      slidesToShow: 1,
+      className: 'center',
+    }
+    return (
+      <Slider {...settings}>
+        <div>
+          <h2>TITULO FALANDO SOBRE O JOGO</h2>
+          <h3>TEXTO FALANDO SOBRE O JOGO</h3>
+          <button
+            style={{
+              border: '1px solid green',
+              fontWeight: 'bold',
+              borderRadius: 5,
+              backgroundColor: 'green',
+              color: '#fff',
+              padding: 10,
+            }}
+          >
+            Acesse
+          </button>
+        </div>
+        <div>
+          <h2>TITULO FALANDO SOBRE O JOGO</h2>
+        </div>
+      </Slider>
+    )
+  }
+
   return (
     <>
       <Head>
@@ -21,7 +56,99 @@ export default function Home() {
           <FaLinkedinIn color="#fff" />
         </div>
       </div>
-      <div id={`${styles.bgGreenLarger}`}></div>
+      <div id={`${styles.bgGreenLarger}`}>
+        <p style={{ color: '#fff', fontSize: 26 }}>Mineirinho</p>
+      </div>
+      <div
+        style={{
+          maxWidth: 800,
+          margin: '0 auto',
+        }}
+      >
+        <SimpleSlider />
+      </div>
+
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          flexDirection: 'column',
+          marginTop: 50,
+        }}
+      >
+        <h3>TÍTULO FALANDO SOBRE O FILME</h3>
+
+        <iframe
+          width="400"
+          height="315"
+          src="https://www.youtube.com/embed/CADFhiWXanU?si=79S-lXOG2Q1Dm7zg"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        ></iframe>
+      </div>
+
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          flexDirection: 'row',
+          marginTop: 50,
+          gap: 50,
+        }}
+      >
+        <Image
+          src="/rota-mineirinho-bg.png"
+          width={350}
+          height={300}
+          alt="Picture"
+        />
+        <div>
+          <h3>TÍTULO </h3>
+          <p>TEXTO SOBRE O PRODUTO</p>
+          <button
+            style={{
+              border: '1px solid green',
+              fontWeight: 'bold',
+              borderRadius: 5,
+              backgroundColor: 'green',
+              color: '#fff',
+              padding: 10,
+            }}
+          >
+            COMPRE AGORA
+          </button>
+        </div>
+      </div>
+      <div id={`${styles.bgGreenFooter}`}>
+        <p
+          style={{
+            color: '#fff',
+            fontSize: 26,
+            marginLeft: 50,
+          }}
+        >
+          Mineirinho
+        </p>
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
+          <p style={{ color: '#fff', fontSize: 26 }}>
+            Siga nossas redes sociais
+          </p>
+          <div style={{ display: 'flex', paddingBottom: 20, gap: 10 }}>
+            <FaInstagram color="#fff" style={{ height: 25, width: 25 }} />
+            <FaFacebook color="#fff" style={{ height: 25, width: 25 }} />
+            <FaLinkedinIn color="#fff" style={{ height: 25, width: 25 }} />
+          </div>
+        </div>
+      </div>
     </>
   )
 }
