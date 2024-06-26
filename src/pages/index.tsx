@@ -166,7 +166,7 @@ export default function Home() {
           width={630}
           height={345}
           alt="Picture"
-          style={{ cursor: 'pointer' }}
+          style={{ cursor: 'pointer', borderRadius: 20 }}
         />
       </div>
 
@@ -185,6 +185,7 @@ export default function Home() {
           width={270}
           height={270}
           alt="Picture"
+          style={{ borderRadius: 20 }}
         />
         <div>
           <h3>EDIÇÃO LIMITADA - GARRAFA RETRÔ</h3>
