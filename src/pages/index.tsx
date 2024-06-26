@@ -10,69 +10,119 @@ export default function Home() {
       className: 'center',
       centerMode: true,
       infinite: true,
-      centerPadding: '60px',
+      // centerPadding: '60px',
       slidesToShow: 2,
       speed: 500,
       dots: true,
     }
     return (
       <Slider {...settings} className="slider-container">
-        <div>
-          {/* <div style={{ backgroundColor: 'yellow', padding: 20 }}> */}
-          <h3>Rota Mineirinho - Supere os obstáculos e celebre no festival</h3>
-          <h4>
-            Está tudo pronto para você ajudar Maurício a conquistar os ingressos
-            para o festival de música dos seus amigos e também concorrer a essa
-            experiência única.
-          </h4>
-          <button
+        <div style={{ margin: 20 }}>
+          <div
             style={{
-              border: '1px solid green',
-              fontWeight: 'bold',
-              borderRadius: 5,
-              backgroundColor: 'green',
+              backgroundImage: 'url(/banner-game.png)',
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: '600px 230px',
+              padding: 20,
               color: '#fff',
-              padding: 10,
             }}
           >
-            Acesse
-          </button>
-          {/* </div> */}
+            <h3 style={{ marginTop: -10, paddingTop: 20 }}>
+              Rota Mineirinho - Supere os <br />
+              obstáculos e celebre no festival
+            </h3>
+            <p>
+              Está tudo pronto para você ajudar Maurício
+              <br /> a conquistar os ingressos para o festival de
+              <br /> música dos seus amigos e também concorrer
+              <br /> a essa experiência única.
+            </p>
+            <button
+              style={{
+                border: '1px solid green',
+                fontWeight: 'bold',
+                borderRadius: 5,
+                backgroundColor: 'green',
+                color: '#fff',
+                padding: 10,
+                cursor: 'pointer',
+              }}
+            >
+              Acesse
+            </button>
+          </div>
         </div>
-        <div>
-          <h3>Mineirinho e memórias - O reencontro</h3>
-          <h4>Confira o encontro de Maurício e seus amigos.</h4>
-          <button
+        <div style={{ margin: 20 }}>
+          <div
             style={{
-              border: '1px solid green',
-              fontWeight: 'bold',
-              borderRadius: 5,
-              backgroundColor: 'green',
+              backgroundImage: 'url(/banner-hq.png)',
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: '600px 230px',
+              padding: 20,
               color: '#fff',
-              padding: 10,
             }}
           >
-            Acesse
-          </button>
+            <h3 style={{ marginTop: -10, paddingTop: 20 }}>
+              Mineirinho e memórias - O reencontro
+            </h3>
+            <p>Confira o encontro de Maurício e seus amigos.</p>
+            <button
+              style={{
+                border: '1px solid green',
+                fontWeight: 'bold',
+                borderRadius: 5,
+                backgroundColor: 'green',
+                color: '#fff',
+                padding: 10,
+                cursor: 'pointer',
+              }}
+            >
+              Acesse
+            </button>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+          </div>
         </div>
-        <div>
-          <h3>Um brinde à memórias que criamos - Mineirinho.</h3>
-          <h4>
-            Três amigos cariocas se reencontram e embarcam numa jornada para
-            conquistar ingressos para um festival de música.
-          </h4>
-          <button
+        <div style={{ margin: 20 }}>
+          <div
             style={{
-              border: '1px solid green',
-              fontWeight: 'bold',
-              borderRadius: 5,
-              backgroundColor: 'green',
+              backgroundImage: 'url(/banner-movie.png)',
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: '600px 230px',
+              padding: 20,
               color: '#fff',
-              padding: 10,
             }}
           >
-            Acesse
-          </button>
+            <h3 style={{ marginTop: -10, paddingTop: 20 }}>
+              Um brinde à memórias que criamos - Mineirinho.
+            </h3>
+            <p>
+              Três amigos cariocas se reencontram e embarcam
+              <br /> numa jornada para conquistar ingressos para um <br />
+              festival de música.
+            </p>
+            <button
+              style={{
+                border: '1px solid green',
+                fontWeight: 'bold',
+                borderRadius: 5,
+                backgroundColor: 'green',
+                color: '#fff',
+                padding: 10,
+                cursor: 'pointer',
+              }}
+            >
+              Acesse
+            </button>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+          </div>
         </div>
       </Slider>
     )
@@ -88,9 +138,9 @@ export default function Home() {
       </Head>
       <div id={`${styles.bgGreen}`}>
         <div style={{ display: 'flex', gap: 5, paddingRight: 20 }}>
-          <FaInstagram color="#fff" />
-          <FaFacebook color="#fff" />
-          <FaLinkedinIn color="#fff" />
+          <FaInstagram color="#fff" style={{ cursor: 'pointer' }} />
+          <FaFacebook color="#fff" style={{ cursor: 'pointer' }} />
+          <FaLinkedinIn color="#fff" style={{ cursor: 'pointer' }} />
         </div>
       </div>
       <div id={`${styles.bgGreenLarger}`}>
@@ -112,10 +162,11 @@ export default function Home() {
         <h3>VAI ENTRAR OUTRA COISA AQUI</h3>
 
         <Image
-          src="/rota-mineirinho-bg.png"
+          src="/image-video.png"
           width={630}
           height={345}
           alt="Picture"
+          style={{ cursor: 'pointer' }}
         />
       </div>
 
@@ -130,7 +181,7 @@ export default function Home() {
         }}
       >
         <Image
-          src="/product-image.png"
+          src="/image-product.png"
           width={270}
           height={270}
           alt="Picture"
@@ -177,9 +228,18 @@ export default function Home() {
             Siga nossas redes sociais
           </p>
           <div style={{ display: 'flex', paddingBottom: 20, gap: 10 }}>
-            <FaInstagram color="#fff" style={{ height: 25, width: 25 }} />
-            <FaFacebook color="#fff" style={{ height: 25, width: 25 }} />
-            <FaLinkedinIn color="#fff" style={{ height: 25, width: 25 }} />
+            <FaInstagram
+              color="#fff"
+              style={{ height: 25, width: 25, cursor: 'pointer' }}
+            />
+            <FaFacebook
+              color="#fff"
+              style={{ height: 25, width: 25, cursor: 'pointer' }}
+            />
+            <FaLinkedinIn
+              color="#fff"
+              style={{ height: 25, width: 25, cursor: 'pointer' }}
+            />
           </div>
         </div>
       </div>
