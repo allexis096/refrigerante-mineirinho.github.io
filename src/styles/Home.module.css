@@ -30,7 +30,7 @@
   background-color: #116C4B;
   height: 130px;
   width: 100%;
-  margin-top: 15px;
+  margin-top: 90px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }

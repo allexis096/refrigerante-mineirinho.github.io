@@ -7,20 +7,41 @@ import Image from 'next/image'
 export default function Home() {
   function SimpleSlider() {
     var settings = {
-      dots: true,
-      infinite: true,
-      speed: 500,
-      slidesToScroll: 1,
-      centerMode: true,
-      centerPadding: '70px',
-      slidesToShow: 1,
       className: 'center',
+      centerMode: true,
+      infinite: true,
+      centerPadding: '60px',
+      slidesToShow: 2,
+      speed: 500,
+      dots: true,
     }
     return (
-      <Slider {...settings}>
+      <Slider {...settings} className="slider-container">
         <div>
-          <h2>TITULO FALANDO SOBRE O JOGO</h2>
-          <h3>TEXTO FALANDO SOBRE O JOGO</h3>
+          {/* <div style={{ backgroundColor: 'yellow', padding: 20 }}> */}
+          <h3>Rota Mineirinho - Supere os obstáculos e celebre no festival</h3>
+          <h4>
+            Está tudo pronto para você ajudar Maurício a conquistar os ingressos
+            para o festival de música dos seus amigos e também concorrer a essa
+            experiência única.
+          </h4>
+          <button
+            style={{
+              border: '1px solid green',
+              fontWeight: 'bold',
+              borderRadius: 5,
+              backgroundColor: 'green',
+              color: '#fff',
+              padding: 10,
+            }}
+          >
+            Acesse
+          </button>
+          {/* </div> */}
+        </div>
+        <div>
+          <h3>Mineirinho e memórias - O reencontro</h3>
+          <h4>Confira o encontro de Maurício e seus amigos.</h4>
           <button
             style={{
               border: '1px solid green',
@@ -35,7 +56,23 @@ export default function Home() {
           </button>
         </div>
         <div>
-          <h2>TITULO FALANDO SOBRE O JOGO</h2>
+          <h3>Um brinde à memórias que criamos - Mineirinho.</h3>
+          <h4>
+            Três amigos cariocas se reencontram e embarcam numa jornada para
+            conquistar ingressos para um festival de música.
+          </h4>
+          <button
+            style={{
+              border: '1px solid green',
+              fontWeight: 'bold',
+              borderRadius: 5,
+              backgroundColor: 'green',
+              color: '#fff',
+              padding: 10,
+            }}
+          >
+            Acesse
+          </button>
         </div>
       </Slider>
     )
@@ -57,14 +94,9 @@ export default function Home() {
         </div>
       </div>
       <div id={`${styles.bgGreenLarger}`}>
-        <p style={{ color: '#fff', fontSize: 26 }}>Mineirinho</p>
+        <Image src="/logo.png" width={220} height={100} alt="Picture" />
       </div>
-      <div
-        style={{
-          maxWidth: 800,
-          margin: '0 auto',
-        }}
-      >
+      <div style={{ maxWidth: '95%', marginTop: 15 }}>
         <SimpleSlider />
       </div>
 
@@ -74,18 +106,17 @@ export default function Home() {
           alignItems: 'center',
           justifyContent: 'center',
           flexDirection: 'column',
-          marginTop: 50,
+          marginTop: 90,
         }}
       >
-        <h3>TÍTULO FALANDO SOBRE O FILME</h3>
+        <h3>VAI ENTRAR OUTRA COISA AQUI</h3>
 
-        <iframe
-          width="400"
-          height="315"
-          src="https://www.youtube.com/embed/CADFhiWXanU?si=79S-lXOG2Q1Dm7zg"
-          title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        ></iframe>
+        <Image
+          src="/rota-mineirinho-bg.png"
+          width={630}
+          height={345}
+          alt="Picture"
+        />
       </div>
 
       <div
@@ -94,19 +125,23 @@ export default function Home() {
           alignItems: 'center',
           justifyContent: 'center',
           flexDirection: 'row',
-          marginTop: 50,
+          marginTop: 90,
           gap: 50,
         }}
       >
         <Image
-          src="/rota-mineirinho-bg.png"
-          width={350}
-          height={300}
+          src="/product-image.png"
+          width={270}
+          height={270}
           alt="Picture"
         />
         <div>
-          <h3>TÍTULO </h3>
-          <p>TEXTO SOBRE O PRODUTO</p>
+          <h3>EDIÇÃO LIMITADA - GARRAFA RETRÔ</h3>
+          <p>
+            Seu passaporte para Festival de Música começa <br />
+            com uma garrafa retrô. Garanta já a sua <br />e concorra a ingressos
+            VIP&lsquo;S.
+          </p>
           <button
             style={{
               border: '1px solid green',
@@ -115,6 +150,7 @@ export default function Home() {
               backgroundColor: 'green',
               color: '#fff',
               padding: 10,
+              cursor: 'pointer',
             }}
           >
             COMPRE AGORA
@@ -122,15 +158,13 @@ export default function Home() {
         </div>
       </div>
       <div id={`${styles.bgGreenFooter}`}>
-        <p
-          style={{
-            color: '#fff',
-            fontSize: 26,
-            marginLeft: 50,
-          }}
-        >
-          Mineirinho
-        </p>
+        <Image
+          style={{ marginLeft: 50 }}
+          src="/logo.png"
+          width={220}
+          height={100}
+          alt="Picture"
+        />
         <div
           style={{
             display: 'flex',
