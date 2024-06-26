@@ -10,7 +10,7 @@ export default function Home() {
       className: 'center',
       centerMode: true,
       infinite: true,
-      // centerPadding: '60px',
+      centerPadding: '40px',
       slidesToShow: 2,
       speed: 500,
       dots: true,
